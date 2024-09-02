@@ -57,3 +57,13 @@ WantedBy=multi-user.target
 
 Now you are good to go! The monitor is now running and you should see the embed in the channel ID specified during *step 3*. If the server is rebooted, the process will restart automatically, however it will create a **new** message in the channel, you must delete the old message, or don't, up to you.  
 
+## Product Demo
+
+![Screenshot_20240901_204007](https://github.com/user-attachments/assets/d17072da-e3cd-4fcd-894a-b50e9389be1d)
+
+Displays actively updating CPU Usage, RAM Usage, Disk Usage and Network Usage
+
+## Disclaimer
+
+Disk monitoring is set to check the disk "/", if you have your main partition mounted elsewhere you will have to edit the source code. If enough people ask, we will make a customizable mount point monitor. 
+
