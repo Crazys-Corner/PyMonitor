@@ -20,8 +20,11 @@ Now you're done!
 Option B: Monitoring a server 
 
 1: SSH into your server
+
 2: `sudo wget https://github.com/Crazys-Corner/PyMonitor/releases/download/V1/main -O /usr/bin/pymonitor` (Replace download url to latest or preferred release file, titled main, this assumes V1)
+
 3: Run the following to test the applciation and go through first time setup - **this is important:** `cd /usr/bin/pymonitor && chmod +x main && ./main` - Once you run the file, you will be prompted to provide your discord bot token (Obtainable here: https://discord.com/developers/applications) and a channel ID to send the bot message to. Please make sure to invite the bot to the server, with adequate permissions before continuing.
+
 4: Create a file in `/etc/systemd/system/pymonitor.service`, here's how I'd do it:
 
 First:
