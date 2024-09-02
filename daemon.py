@@ -5,8 +5,10 @@ import json
 import requests
 import time
 import subprocess
+import os
 
-CONTROL_SERVER_URL = "http://10.5.0.2:5000/report"  # Replace with your control server's IP and port
+CONFIG_FILE = "daemon-config.json"
+CONTROL_SERVER_URL = "http://10.5.0.2:5000/report"  # Default value, can be overwritten by user
 
 # Load monitored services from a config file
 def load_monitored_services():
@@ -18,9 +20,40 @@ def load_monitored_services():
 
 def save_monitored_services(services):
     with open("monitored_services.json", "w") as f:
-        json.dump(services, f)
+        json.dump(services, f, indent=4)
 
 monitored_services = load_monitored_services()
+
+def load_config():
+    if os.path.exists(CONFIG_FILE):
+        with open(CONFIG_FILE, 'r') as file:
+            return json.load(file)
+    return None
+
+def save_config(config):
+    with open(CONFIG_FILE, 'w') as file:
+        json.dump(config, file, indent=4)
+
+def get_config():
+    config = load_config()
+    
+    if config is None:
+        print("It looks like this is your first time running the daemon.")
+        server_address = input("Please enter the address of the server where reports should be sent (e.g., http://example.com:5000): ")
+        
+        config = {
+            "SERVER_ADDRESS": server_address
+        }
+        save_config(config)
+        print("Configuration saved.")
+    else:
+        print("Configuration loaded.")
+    
+    return config
+
+# Load the configuration
+config = get_config()
+CONTROL_SERVER_URL = config["SERVER_ADDRESS"]
 
 def get_system_data():
     data = {
@@ -111,7 +144,7 @@ def report_to_control_server():
             print(f"Reported to control server: {response.status_code}")
         except Exception as e:
             print(f"Failed to report: {str(e)}")
-        time.sleep(2)  # Report every 60 seconds
+        time.sleep(60)  # Report every 60 seconds
 
 if __name__ == "__main__":
     report_to_control_server()
