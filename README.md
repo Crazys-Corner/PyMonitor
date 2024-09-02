@@ -1,4 +1,8 @@
-![Screenshot_20240902_004315](https://github.com/user-attachments/assets/96b1020d-7c5a-4542-8e0b-dfec87c6668f)# Monitor your server with PyMonitor
+
+![Pm](https://github.com/user-attachments/assets/c9fbc9e9-eef6-47f9-ad28-3eef9306ce3c)
+
+
+# Monitor your server with PyMonitor
 
 PyMonitor is a simplistic monitoring solution that we (@SilentAssassin101 and I) made in a 30 minute coding challenge. We decided to build an infrastructure monitoring tool to help you easily visualize your server resource usage. 
 
