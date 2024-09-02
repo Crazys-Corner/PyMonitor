@@ -10,7 +10,7 @@ Installation is easy
 
 Option A: Monitoring your own machine 
 
-1: Head over to the (Releases Tab)[https://github.com/Crazys-Corner/PyMonitor/releases/ ]
+1: Head over to the [Releases Tab](https://github.com/Crazys-Corner/PyMonitor/releases/)
 2: Download the executable 
 3: Open up your terminal and navigate to where the file is located
 4: `chmod +x main && ./main`
