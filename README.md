@@ -49,6 +49,7 @@ WantedBy=multi-user.target
 ```
 
 5: Run `systemctl daemon-reload`
+
 6: Run `systemctl enable --now pymonitor.service`
 
 Now you are good to go! The monitor control is now running and you should see the embed in the channel ID specified during *step 3*. If the server is rebooted, the process will restart automatically, however it will create a **new** message in the channel, you must delete the old message, or don't, up to you.
@@ -86,6 +87,7 @@ WantedBy=multi-user.target
 ```
 
 5: Run `systemctl daemon-reload`
+
 6: Run `systemctl enable --now pydaemon.service`
 
 Now everything is setup and should be running correctly. 
