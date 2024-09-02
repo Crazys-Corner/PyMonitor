@@ -6,7 +6,7 @@
 
 PyMonitor is a simplistic monitoring solution that we (@SilentAssassin101 and I) made in a 30 minute coding challenge. We decided to build an infrastructure monitoring tool to help you easily visualize your server resource usage. 
 
-## Install
+# Install
 
 Installation is easy
 
@@ -17,7 +17,9 @@ Prerequisites:
 ATLEAST 1 Debian-based Machine (Windows is unsupported, feel free to try, RHEL should work but is untested)
 
    We suggest using two machines, one to run the control server, one to be a daemon monitored by the control server. One machine CAN run both the control server and the daemon. You must connect all daemons to the control server. 
-   
+
+## Control App
+  
 1: SSH into your control server. 
 
 2: `sudo wget https://github.com/Crazys-Corner/PyMonitor/releases/download/V3/control -O /usr/bin/pymonitor/control` 
@@ -53,6 +55,8 @@ WantedBy=multi-user.target
 6: Run `systemctl enable --now pymonitor.service`
 
 Now you are good to go! The monitor control is now running and you should see the embed in the channel ID specified during *step 3*. If the server is rebooted, the process will restart automatically, however it will create a **new** message in the channel, you must delete the old message, or don't, up to you.
+
+## Daemon Setup
 
 Now to setup the individual daemons. These are the servers that are monitored by the control server we just setup. 
 
