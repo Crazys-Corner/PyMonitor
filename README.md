@@ -97,7 +97,8 @@ Now everything is setup and should be running correctly.
 
 Displays actively updating server data across 2 machines. 
 
-![Screenshot_20240902_004315](https://github.com/user-attachments/assets/21f64454-4947-4e3c-8e56-bcd881d89331)
+![Screenshot_20240902_004754](https://github.com/user-attachments/assets/ada859e0-ca66-4196-86dc-d4aae6494928)
+
 
 You can receive notifications on each node if something happens.
 
