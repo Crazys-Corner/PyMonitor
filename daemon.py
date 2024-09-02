@@ -42,8 +42,9 @@ def get_config():
         server_address = input("Please enter the address of the server where reports should be sent (e.g., http://example.com:5000): ")
         
         config = {
-            "SERVER_ADDRESS": server_address
+            "SERVER_ADDRESS": server_address.rstrip('/') + "/report"
         }
+
         save_config(config)
         print("Configuration saved.")
     else:
@@ -144,7 +145,7 @@ def report_to_control_server():
             print(f"Reported to control server: {response.status_code}")
         except Exception as e:
             print(f"Failed to report: {str(e)}")
-        time.sleep(60)  # Report every 60 seconds
+        time.sleep(5)  # Report every 5 seconds
 
 if __name__ == "__main__":
     report_to_control_server()
