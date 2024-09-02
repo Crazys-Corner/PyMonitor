@@ -53,7 +53,7 @@ Now to setup the individual daemons. These are the servers that are monitored by
 
 1: SSH into a server you would like to monitor. *Note*: You **CAN** use the same server as control, however in the event that this server goes down, you will not be notified (logically) 
 
-2: `https://github.com/Crazys-Corner/PyMonitor/releases/download/V3/daemon -O /usr/bin/pymonitor/daemon`
+2: `sudo wget https://github.com/Crazys-Corner/PyMonitor/releases/download/V3/daemon -O /usr/bin/pymonitor/daemon`
 
 3: Run the following to test the applciation and go through first time setup - **this is important:** `cd /usr/bin/pymonitor && chmod +x daemon && ./daemon` - Once you run the file, you will be prompted to provide the URL to your control server. This is going to be http://yourcontrolserverip:5000/report. **The /report at the end is important.**
 
