@@ -22,7 +22,7 @@ ATLEAST 1 Debian-based Machine (Windows is unsupported, feel free to try, RHEL s
   
 1: SSH into your control server. 
 
-2: `sudo wget https://github.com/Crazys-Corner/PyMonitor/releases/download/V3/control -O /usr/bin/pymonitor/control` 
+2: `sudo mkdir -p /usr/bin/pymonitor && sudo wget https://github.com/Crazys-Corner/PyMonitor/releases/download/V3/control -O /usr/bin/pymonitor/control` 
 
 3: Run the following to test the applciation and go through first time setup - **this is important:** `cd /usr/bin/pymonitor && chmod +x control && ./control` - Once you run the file, you will be prompted to provide your discord bot token (Obtainable here: https://discord.com/developers/applications) and a channel ID to send the bot message to. Please make sure to invite the bot to the server, with adequate permissions before continuing. You should give it applications.commands, bot, and administrator
 
@@ -62,7 +62,7 @@ Now to setup the individual daemons. These are the servers that are monitored by
 
 1: SSH into a server you would like to monitor. *Note*: You **CAN** use the same server as control, however in the event that this server goes down, you will not be notified (logically) 
 
-2: `sudo wget https://github.com/Crazys-Corner/PyMonitor/releases/download/V3/daemon -O /usr/bin/pymonitor/daemon`
+2: `sudo mkdir -p /usr/bin/pymonitor && sudo wget https://github.com/Crazys-Corner/PyMonitor/releases/download/V3/daemon -O /usr/bin/pymonitor/daemon`
 
 3: Run the following to test the applciation and go through first time setup - **this is important:** `cd /usr/bin/pymonitor && chmod +x daemon && ./daemon` - Once you run the file, you will be prompted to provide the URL to your control server. This is going to be http://yourcontrolserverip:5000/
 
