@@ -1,4 +1,4 @@
-# Monitor your server with PyMonitor
+![Screenshot_20240902_004315](https://github.com/user-attachments/assets/96b1020d-7c5a-4542-8e0b-dfec87c6668f)# Monitor your server with PyMonitor
 
 PyMonitor is a simplistic monitoring solution that we (@SilentAssassin101 and I) made in a 30 minute coding challenge. We decided to build an infrastructure monitoring tool to help you easily visualize your server resource usage. 
 
@@ -55,7 +55,7 @@ Now to setup the individual daemons. These are the servers that are monitored by
 
 2: `sudo wget https://github.com/Crazys-Corner/PyMonitor/releases/download/V3/daemon -O /usr/bin/pymonitor/daemon`
 
-3: Run the following to test the applciation and go through first time setup - **this is important:** `cd /usr/bin/pymonitor && chmod +x daemon && ./daemon` - Once you run the file, you will be prompted to provide the URL to your control server. This is going to be http://yourcontrolserverip:5000/report. **The /report at the end is important.**
+3: Run the following to test the applciation and go through first time setup - **this is important:** `cd /usr/bin/pymonitor && chmod +x daemon && ./daemon` - Once you run the file, you will be prompted to provide the URL to your control server. This is going to be http://yourcontrolserverip:5000/
 
 4: Create a file in `/etc/systemd/system/pydaemon.service`, here's how I'd do it:
 
@@ -88,9 +88,21 @@ Now everything is setup and should be running correctly.
 
 ## Product Demo
 
-![Screenshot_20240901_204007](https://github.com/user-attachments/assets/d17072da-e3cd-4fcd-894a-b50e9389be1d)
+![Screenshot_20240902_004315](https://github.com/user-attachments/assets/be2cd378-4aa7-4e56-9659-22ca29e42100)
 
-Displays actively updating CPU Usage, RAM Usage, Disk Usage and Network Usage
 
+Displays actively updating server data across 2 machines. 
+
+![Screenshot_20240902_004315](https://github.com/user-attachments/assets/21f64454-4947-4e3c-8e56-bcd881d89331)
+
+You can receive notifications on each node if something happens.
+
+![Screenshot_20240902_004555](https://github.com/user-attachments/assets/bc8f718b-657f-4941-8268-86dc4af94595)
+
+You can list all actively connected hosts
+
+![Screenshot_20240902_004629](https://github.com/user-attachments/assets/467ec06a-f226-4640-ac15-caf9d49e3e11)
+
+Try out the other features!
 
 
